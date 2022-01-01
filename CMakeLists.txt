@@ -51,6 +51,12 @@ configure_package_config_file(
             INSTALL_INCLUDE_DIR
   INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX})
 
+# Create version file
+write_basic_package_version_file(
+  ${CMAKE_CURRENT_BINARY_DIR}/CppUnitLiteConfigVersion.cmake
+  VERSION ${CppUnitLite_VERSION}
+  COMPATIBILITY SameMajorVersion)
+
 # Set all the install paths
 set(${PROJECT_NAME}_CMAKE_INSTALL_DIR
     ${CMAKE_INSTALL_PREFIX}/${INSTALL_CMAKE_DIR})
